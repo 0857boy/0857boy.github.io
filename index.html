@@ -15,6 +15,21 @@
             animation: myAnimation 2s infinite;
         }
     </style>
+    <script>
+        // Get the animated element
+        var animatedElement = document.querySelector('.animated-element');
+
+        // Add mouseover event listener
+        animatedElement.addEventListener('mouseover', function() {
+            // Generate random position
+            var randomX = Math.floor(Math.random() * window.innerWidth);
+            var randomY = Math.floor(Math.random() * window.innerHeight);
+
+            // Apply new position
+            animatedElement.style.left = randomX + 'px';
+            animatedElement.style.top = randomY + 'px';
+        });
+    </script>
 </head>
 <body>
     <div class="animated-element">
